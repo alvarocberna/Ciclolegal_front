@@ -1,4 +1,5 @@
-// "use client";
+"use client";
+import React from 'react';
 import Image from "next/image"
 import img1 from '../media/img_derecho_civil.png'
 import img2 from '../media/img_derecho_laboral.png'
@@ -9,10 +10,11 @@ import img6 from '../media/img_juzgado_policia.png'
 import imgAbodado1 from '../media/img_claudio_saavedra_abogado.jpg'
 import imgAbodado2 from '../media/img_daniela_astorga_abogada.jpg'
 import imgAbodado3 from '../media/img_daniela_portales_abogada.jpg'
-
-
-
 import ImgPortada from '../media/img_abogados_1.jpg'
+import imgVerde from '../media/img_verde.png'
+import imgNaranja from '../media/img_naranja.png'
+import Carousel from 'react-bootstrap/Carousel';
+import Link from 'next/link';
 
 function Portada() {
     return (
@@ -24,7 +26,9 @@ function Portada() {
                 style={{ position: 'absolute', width: '100%', height: '100%' }}>
                 <h1 className="col-10 col-md-8 col-lg-7 text-center py-4 text-white display-4 fw-bold"
                     style={{ textShadow: '3px 3px 15px black', border: '2px solid #4DA6BE' }}>
-                    Asesoría juridica especializada para emprendedores
+                    Asesoría jurídica especializada
+                    para emprendedores
+
                 </h1>
                 <h2 className="col-10 col-md-8 col-lg-7 text-center text-white h3"
                     style={{ textShadow: '3px 3px 15px black' }}>
@@ -35,9 +39,59 @@ function Portada() {
     )
 }
 
+function QuienesSomos() {
+    return (
+        <div className='col-12 d-flex flex-column mb-5' id='QuienesSomos'>
+            <div className=' ps-0 d-flex flex-column  justify-content-between m-auto col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9'>
+                <h2 className='col-12 mb-5 h1 m-auto' style={{ color: '#4DA6BE' }}>Quienes somos</h2>
+                <p className='col-12' style={{ textAlign: 'justify' }}>
+                    En Ciclo Legal, somos un equipo de profesionales comprometidos con la excelencia en el ámbito legal.
+                    Fundado en 2021 por solo un equipo legal, ampliando capacidad profesional tanto social como contable.
+                </p>
+                <p className='col-12' style={{ textAlign: 'justify' }}>
+                    Ciclo Legal, nace con el propósito de brindar asesoría jurídica especializada a emprendedores y
+                    particulares, marcando la diferencia en el mundo legal, ampliando la solución de conflictos más
+                    interdisciplinaria con profesionales especialistas en sus áreas.
+                </p>
+                <p className='col-12' style={{ textAlign: 'justify' }}>
+                    Nos caracterizamos por ofrecer un enfoque integral y ciclíco en cada proceso legal. Nuestro nombre
+                    refleja nuestra convicción de que cada trámite, desde su inicio hasta su conclusión, forma parte
+                    de un ciclo continuo. Acompañamos a nuestros clientes con compromiso, confianza, confidencialidad,
+                    empatía y, sobre todo, seguridad en cada paso de su viaje legal.”
+                </p>
+
+            </div>
+        </div>
+    )
+}
+
+function Mision() {
+    return (
+        <div className='col-12 d-flex flex-column mb-5' style={{ background: '#4DA6BE', padding: '60px 0 70px 0', position: 'relative' }}>
+            <Image src={ImgPortada} className='h-100 w-100' style={{ position: 'absolute', top: '0px', objectFit: 'cover' }}></Image>
+            <div style={{ background: '#4DA6BE', position: 'absolute', top: '0px', opacity: '0.8' }} className='w-100 h-100'></div>
+            <div className='col-9 m-auto' style={{ position: 'relative' }}>
+                <h2 className='col-12 mb-3 h1 m-auto' style={{ color: 'white' }}>Misión</h2>
+                <p className='col-12 m-auto text-white mb-3' style={{ textAlign: 'justify' }}>
+                    En Ciclo Legal, nos dedicamos a ser el respaldo legal que necesitas en cada etapa de tu vida y
+                    emprendimiento. Nuestra misión es proporcionar servicios jurídicos de calidad, garantizando la
+                    satisfacción de nuestros clientes y contribuyendo al desarrollo de una comunidad informada y empoderada.
+                </p>
+                <p className='col-12 m-auto text-white' style={{ textAlign: 'justify' }}>
+                    Ofrecemos representación en materias judiciales, abarcando casos de Familia, Civiles, Laborales,
+                    Societarias, Tránsito y Consumidor. Nuestra diferenciación radica en la accesibilidad, tanto en
+                    honorarios como en comunicación, con asesoría y acompañamiento remoto en todo el territorio nacional,
+                    y, presencial en Región de Valparaíso y Santiago.
+                </p>
+            </div>
+        </div>
+    )
+}
+
 function Servicio({ titulo, img, ruta }) {
     return (
-        <div className="px-0 mb-3 mx-1 col-12 col-md-5 col-lg-3" style={{ height: '250px', position: 'relative', borderRadius: '20px' }}>
+        <Link className="px-0 mb-3 mx-1 col-12 col-md-5 col-lg-3" href={ruta}
+            style={{ height: '250px', position: 'relative', borderRadius: '20px' }}>
             <Image src={img} className="w-100 h-100" style={{ position: 'absolute', borderRadius: '20px' }}></Image>
             <div className="w-100 h-100" style={{ position: 'absolute', background: 'black', opacity: '0.3', borderRadius: '20px' }}></div>
             <div className="w-100 h-100 d-flex flex-column align-items-center justify-content-center" style={{ position: 'absolute' }}>
@@ -45,21 +99,21 @@ function Servicio({ titulo, img, ruta }) {
                 <div className="col-6 mb-4" style={{ height: '2px', background: 'white' }}></div>
                 <button className="btn rounded text-white w-75" style={{ border: '2px solid white', }}>Mas información</button>
             </div>
-        </div>
+        </Link>
     )
 }
 
 function Servicios() {
     return (
-        <div className="row col-12 d-flex justify-content-center mb-5">
+        <div className="row col-12 d-flex justify-content-center mb-5" id='servicios'>
             <h2 className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-5 h1" style={{ color: '#4DA6BE' }}>Servicios</h2>
             <div className="row col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 d-flex justify-content-between">
-                <Servicio titulo='Derecho civil' img={img1} />
-                <Servicio titulo='Derecho laboral' img={img2} />
-                <Servicio titulo='Derecho de familia' img={img3} />
-                <Servicio titulo='Derecho inmobiliario' img={img4} />
-                <Servicio titulo='Derecho corporativo' img={img5} />
-                <Servicio titulo='Juzgado de polocía local' img={img6} />
+                <Servicio titulo='Derecho civil' img={img1} ruta='/servicios/derecho-civil' />
+                <Servicio titulo='Derecho laboral' img={img2} ruta='/servicios/derecho-laboral' />
+                <Servicio titulo='Derecho de familia' img={img3} ruta='/servicios/derecho-de-familia' />
+                <Servicio titulo='Derecho inmobiliario' img={img4} ruta='/servicios/derecho-inmobiliario' />
+                <Servicio titulo='Derecho corporativo' img={img5} ruta='/servicios/derecho-corporativo' />
+                <Servicio titulo='Juzgado de polocía local' img={img6} ruta='/servicios/juzgado-de-policia' />
             </div>
 
         </div>
@@ -68,16 +122,27 @@ function Servicios() {
 
 function Abogados() {
     return (
-        <div className="row col-12 d-flex justify-content-center mb-5">
+        <div className="row col-12 d-flex justify-content-center mb-5" id='abogados'>
             <h2 className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-5 h1" style={{ color: '#4DA6BE' }}>Abogados</h2>
-            <div className="row d-flex flex-column flex-lg-row col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 justify-content-around">
+            <div className="row d-flex flex-column flex-lg-row col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 align-items-start justify-content-around">
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column">
                     <Image src={imgAbodado1} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
-                    <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
+                    <div className=" d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Claudio Saavedra</h2>
-                        <p className="col-12" style={{ textAlign: 'justify' }}>
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
+                        <p className='col-12 h5 text-center'>
+                            Abogado
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Licenciado en Ciencias Jurídicas.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Magister en Dirección Tributaria, Universidad Viña del Mar 2023.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomado en Seguridad Ciudadana, Universidad de Chile, 2023.
+                        </p>
+                        <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
+                            Claudio.saavedra@ciclolegal.cl
                         </p>
                     </div>
                 </div>
@@ -85,9 +150,17 @@ function Abogados() {
                     <Image src={imgAbodado2} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Daniela Astorga</h2>
-                        <p className="col-12" style={{ textAlign: 'justify' }}>
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
+                        <p className='col-12 h5 text-center'>
+                            Abogada
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Licenciada en Ciencias Jurídicas.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada en Mediación Familiar, U. Católica de Valparaíso.
+                        </p>
+                        <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
+                            Daniela.portales@ciclolegal.cl
                         </p>
                     </div>
                 </div>
@@ -95,9 +168,22 @@ function Abogados() {
                     <Image src={imgAbodado3} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Daniela Portales</h2>
-                        <p className="col-12" style={{ textAlign: 'justify' }}>
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
-                            lorem ipsum dolor sit amter lorem ipsum dolor sit amter
+                        <p className='col-12 h5 text-center'>
+                            Abogada
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Licenciada en Ciencias Jurídicas.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada en Seguridad Ciudadana, Universidad de Chile, 2022.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada En Implementación De Políticas Públicas A Nivel Municipal,
+                            Universidad Austral de Chile, 2018.
+
+                        </p>
+                        <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
+                            Daniela.astorga@ciclolegal.cl
                         </p>
                     </div>
                 </div>
@@ -106,14 +192,59 @@ function Abogados() {
     )
 }
 
+function ArticulosOpinion() {
+    return (
+        <div id="carouselExampleCaptions" className="carousel slide mb-5 border">
+            <div className="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <Image src={imgVerde} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
+                    <div className="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <Image src={imgNaranja} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
+                    <div className="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <Image src={imgAbodado1} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
+                    <div className="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+            </button>
+        </div>
+    )
+}
 
 export default function HomePage() {
     return (
         <div className="containter mx-0">
             <Portada />
+            <QuienesSomos />
+            <Mision />
             <Servicios />
             <Abogados />
-
+            <ArticulosOpinion />
+            <div style={{ height: '150px' }} />
         </div>
     )
 }
