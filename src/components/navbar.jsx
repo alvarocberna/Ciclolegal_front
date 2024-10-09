@@ -32,7 +32,7 @@ export default function Navbar() {
                                 <Link className="nav-link h-100 d-flex align-items-center justify-content-center" href="/articulos">Articulos de opinion</Link>
                             </li>
                             <li className="nav-item  col-12 col-lg-2" style={{ height: '60px' }}>
-                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/">Contactanos</Link>
+                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/#contacto">Contactanos</Link>
                             </li>
                         </ul>
                     </div>

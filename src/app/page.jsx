@@ -13,6 +13,9 @@ import imgAbodado3 from '../media/img_daniela_portales_abogada.jpg'
 import ImgPortada from '../media/img_abogados_1.jpg'
 import imgVerde from '../media/img_verde.png'
 import imgNaranja from '../media/img_naranja.png'
+import imgArt1 from '../media/img_articulo_1.jpg'
+import imgArt2 from '../media/img_articulo_2.jpg'
+import imgArt3 from '../media/img_articulo_3.jpg'
 import Carousel from 'react-bootstrap/Carousel';
 import Link from 'next/link';
 
@@ -124,11 +127,11 @@ function Abogados() {
     return (
         <div className="row col-12 d-flex justify-content-center mb-5" id='abogados'>
             <h2 className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-5 h1" style={{ color: '#4DA6BE' }}>Abogados</h2>
-            <div className="row d-flex flex-column flex-lg-row col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 align-items-start justify-content-around">
+            <div className="row d-flex flex-column flex-lg-row mb-md-3 col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 align-items-start justify-content-around">
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column">
                     <Image src={imgAbodado1} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className=" d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
-                        <h2 className="col-12 h4 mb-2 text-center">Claudio Saavedra</h2>
+                        <h2 className="col-12 h4 mb-2 text-center">Claudio E. Saavedra T.</h2>
                         <p className='col-12 h5 text-center'>
                             Abogado
                         </p>
@@ -149,25 +152,7 @@ function Abogados() {
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
                     <Image src={imgAbodado2} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
-                        <h2 className="col-12 h4 mb-2 text-center">Daniela Astorga</h2>
-                        <p className='col-12 h5 text-center'>
-                            Abogada
-                        </p>
-                        <p className='text-center col-12 mb-1'>
-                            Licenciada en Ciencias Jurídicas.
-                        </p>
-                        <p className='text-center col-12 mb-1'>
-                            Diplomada en Mediación Familiar, U. Católica de Valparaíso.
-                        </p>
-                        <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
-                            Daniela.portales@ciclolegal.cl
-                        </p>
-                    </div>
-                </div>
-                <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
-                    <Image src={imgAbodado3} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
-                    <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
-                        <h2 className="col-12 h4 mb-2 text-center">Daniela Portales</h2>
+                        <h2 className="col-12 h4 mb-2 text-center">Daniela F. Astorga V.</h2>
                         <p className='col-12 h5 text-center'>
                             Abogada
                         </p>
@@ -187,6 +172,56 @@ function Abogados() {
                         </p>
                     </div>
                 </div>
+                <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
+                    <Image src={imgAbodado3} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
+                    <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
+                        <h2 className="col-12 h4 mb-2 text-center">Daniela A. Portales E.</h2>
+                        <p className='col-12 h5 text-center'>
+                            Abogada
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Licenciada en Ciencias Jurídicas.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada en Mediación Familiar, U. Católica de Valparaíso.
+                        </p>
+                        <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
+                            Daniela.portales@ciclolegal.cl
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="row d-flex flex-column flex-lg-row col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 align-items-start justify-content-around">
+                <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column">
+                    {/* <Image src={imgAbodado1} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} /> */}
+                    <div className=" d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
+                        <h2 className="col-12 h4 mb-2 text-center">Anita M. Salomón J.</h2>
+                        <p className='col-12 h5 text-center'>
+                            Psicóloga
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada Psicoterapia Para el Tratamiento de Abuso de Alcohol y Drogas, Universidad de Santiago.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Magíster en Intervención Socio Jurídica en Familia de la Universidad Andrés Bello.
+                        </p>
+                    </div>
+                </div>
+                <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
+                    {/* <Image src={imgAbodado2} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} /> */}
+                    <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
+                        <h2 className="col-12 h4 mb-2 text-center">Camila I. Arriagada</h2>
+                        <p className='col-12 h5 text-center'>
+                            Contadora Auditor
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Mención Legislación Tributaria
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Ingeniera Comercial, en curso.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     )
@@ -194,34 +229,50 @@ function Abogados() {
 
 function ArticulosOpinion() {
     return (
-        <div id="carouselExampleCaptions" className="carousel slide mb-5 border">
+        <div id="carouselExampleCaptions" className="carousel slide mb-5 d-flex flex-column">
+            {/* <h2 className="m-auto col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-3 h1" style={{ color: '#4DA6BE' }}>
+                Articulos de opinión
+            </h2> */}
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <Image src={imgVerde} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                <Link className="carousel-item active" href='/articulos/articulo-01'>
+                    <Image src={imgArt1} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <div className="carousel-caption d-block">
+                        <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            La necesidad de dotar a los emprendedores con conocimientos legales y
+                            laborales para fomentar la estabilidad empresarial
+                        </h5>
+                        <p className='text-start fw-semibold' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            Por Claudio Saavedra
+                        </p>
                     </div>
-                </div>
-                <div className="carousel-item">
-                    <Image src={imgNaranja} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                </Link>
+                <Link className="carousel-item" href='/articulos/articulo-02'>
+                    <Image src={imgArt2} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <div className="carousel-caption d-block">
+                        <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            Crisis de seguridad pública en Chile: ¿Qué podemos hacer como ciudadanos?
+                        </h5>
+                        <p className='text-start fw-semibold' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            Por Daniela Astorga
+                        </p>
                     </div>
-                </div>
-                <div className="carousel-item">
-                    <Image src={imgAbodado1} className="d-block w-100" style={{ height: '300px', objectFit: 'cover' }} alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                </Link>
+                <Link className="carousel-item" href='/articulos/articulo-03'>
+                    <Image src={imgArt3} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <div className="carousel-caption d-block">
+                        <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            Formas de resolución de conflictos en Chile y La Mediación
+                        </h5>
+                        <p className='text-start fw-semibold' style={{ textShadow: '2px 2px 15px #737373' }}>
+                            Por Daniela Portales
+                        </p>
                     </div>
-                </div>
+                </Link>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
