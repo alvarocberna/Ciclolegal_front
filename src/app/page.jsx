@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from "next/image"
+import ImgPortada from '../media/img_abogados_1.jpg'
 import img1 from '../media/img_derecho_civil.png'
 import img2 from '../media/img_derecho_laboral.png'
 import img3 from '../media/img_derecho_familia.png'
@@ -10,27 +11,22 @@ import img6 from '../media/img_juzgado_policia.png'
 import imgAbodado1 from '../media/img_claudio_saavedra_abogado.jpg'
 import imgAbodado2 from '../media/img_daniela_astorga_abogada.jpg'
 import imgAbodado3 from '../media/img_daniela_portales_abogada.jpg'
-import ImgPortada from '../media/img_abogados_1.jpg'
-import imgVerde from '../media/img_verde.png'
-import imgNaranja from '../media/img_naranja.png'
 import imgArt1 from '../media/img_articulo_1.jpg'
 import imgArt2 from '../media/img_articulo_2.jpg'
 import imgArt3 from '../media/img_articulo_3.jpg'
-import Carousel from 'react-bootstrap/Carousel';
 import Link from 'next/link';
 
 function Portada() {
     return (
         <div className="row w-100 mx-0 px-0 d-flex justify-content-center mb-5"
             style={{ height: '90vh', position: 'relative' }}>
-            <Image src={ImgPortada} className="h-100 w-100 mx-0 px-0" style={{ objectFit: 'cover' }}></Image>
+            <Image src={ImgPortada} className="h-100 w-100 mx-0 px-0" alt='abogados' style={{ objectFit: 'cover' }}></Image>
             <div className="h-100 w-100" style={{ position: 'absolute', background: 'black', opacity: '0.2' }}></div>
             <div className="d-flex flex-column justify-content-center align-items-center"
                 style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                <h1 className="col-10 col-md-8 col-lg-7 text-center py-4 text-white display-4 fw-bold"
-                    style={{ textShadow: '3px 3px 15px black', border: '2px solid #4DA6BE' }}>
+                <h1 className="col-11 col-md-8 col-lg-7 text-center py-4 text-white display-4 fw-bold"
+                    style={{ textShadow: '3px 3px 15px black', border: '2px solid #4DA6BE', borderRadius: '4px' }}>
                     Asesoría jurídica especializada
-                    para emprendedores
 
                 </h1>
                 <h2 className="col-10 col-md-8 col-lg-7 text-center text-white h3"
@@ -71,7 +67,7 @@ function QuienesSomos() {
 function Mision() {
     return (
         <div className='col-12 d-flex flex-column mb-5' style={{ background: '#4DA6BE', padding: '60px 0 70px 0', position: 'relative' }}>
-            <Image src={ImgPortada} className='h-100 w-100' style={{ position: 'absolute', top: '0px', objectFit: 'cover' }}></Image>
+            <Image src={ImgPortada} alt='abogados' className='h-100 w-100' style={{ position: 'absolute', top: '0px', objectFit: 'cover' }}></Image>
             <div style={{ background: '#4DA6BE', position: 'absolute', top: '0px', opacity: '0.8' }} className='w-100 h-100'></div>
             <div className='col-9 m-auto' style={{ position: 'relative' }}>
                 <h2 className='col-12 mb-3 h1 m-auto' style={{ color: 'white' }}>Misión</h2>
@@ -95,7 +91,7 @@ function Servicio({ titulo, img, ruta }) {
     return (
         <Link className="px-0 mb-3 mx-1 col-12 col-md-5 col-lg-3" href={ruta}
             style={{ height: '250px', position: 'relative', borderRadius: '20px' }}>
-            <Image src={img} className="w-100 h-100" style={{ position: 'absolute', borderRadius: '20px' }}></Image>
+            <Image src={img} alt='...' className="w-100 h-100" style={{ position: 'absolute', borderRadius: '20px' }}></Image>
             <div className="w-100 h-100" style={{ position: 'absolute', background: 'black', opacity: '0.3', borderRadius: '20px' }}></div>
             <div className="w-100 h-100 d-flex flex-column align-items-center justify-content-center" style={{ position: 'absolute' }}>
                 <p className="text-white h4 mb-4 text-center"> {titulo}</p>
@@ -129,7 +125,7 @@ function Abogados() {
             <h2 className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-5 h1" style={{ color: '#4DA6BE' }}>Abogados</h2>
             <div className="row d-flex flex-column flex-lg-row mb-md-3 col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 align-items-start justify-content-around">
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column">
-                    <Image src={imgAbodado1} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
+                    <Image src={imgAbodado1} alt='Claudio Saavedra' className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className=" d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Claudio E. Saavedra T.</h2>
                         <p className='col-12 h5 text-center'>
@@ -144,13 +140,19 @@ function Abogados() {
                         <p className='text-center col-12 mb-1'>
                             Diplomado en Seguridad Ciudadana, Universidad de Chile, 2023.
                         </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomado Intervención Social en N/N/A, 2024.
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomado en Docencia Universitaria, PUCV 2024.
+                        </p>
                         <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
                             Claudio.saavedra@ciclolegal.cl
                         </p>
                     </div>
                 </div>
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
-                    <Image src={imgAbodado2} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
+                    <Image src={imgAbodado2} alt='Daniela Astorga' className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Daniela F. Astorga V.</h2>
                         <p className='col-12 h5 text-center'>
@@ -165,7 +167,11 @@ function Abogados() {
                         <p className='text-center col-12 mb-1'>
                             Diplomada En Implementación De Políticas Públicas A Nivel Municipal,
                             Universidad Austral de Chile, 2018.
-
+                            a
+                        </p>
+                        <p className='text-center col-12 mb-1'>
+                            Diplomada en Justicia Local y Derecho Municipal, UCH 2024.
+                            a
                         </p>
                         <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
                             Daniela.astorga@ciclolegal.cl
@@ -173,11 +179,11 @@ function Abogados() {
                     </div>
                 </div>
                 <div className="col-12 col-lg-3 d-flex flex-column flex-md-row mb-4 flex-lg-column ">
-                    <Image src={imgAbodado3} className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
+                    <Image src={imgAbodado3} alt='Daniela Portales' className="m-auto mb-4" style={{ objectFit: 'cover', height: '320px', width: '220px', borderRadius: '100px' }} />
                     <div className="d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Daniela A. Portales E.</h2>
                         <p className='col-12 h5 text-center'>
-                            Abogada
+                            Abogada y Mediadora
                         </p>
                         <p className='text-center col-12 mb-1'>
                             Licenciada en Ciencias Jurídicas.
@@ -197,7 +203,7 @@ function Abogados() {
                     <div className=" d-flex m-auto flex-column col-12 col-sm-8 col-md-6 col-lg-12  justify-content-center align-items-center">
                         <h2 className="col-12 h4 mb-2 text-center">Anita M. Salomón J.</h2>
                         <p className='col-12 h5 text-center'>
-                            Psicóloga
+                            Trabajadora Social
                         </p>
                         <p className='text-center col-12 mb-1'>
                             Diplomada Psicoterapia Para el Tratamiento de Abuso de Alcohol y Drogas, Universidad de Santiago.
@@ -240,7 +246,7 @@ function ArticulosOpinion() {
             </div>
             <div className="carousel-inner">
                 <Link className="carousel-item active" href='/articulos/articulo-01'>
-                    <Image src={imgArt1} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <Image src={imgArt1} alt='articulo' className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} />
                     <div className="carousel-caption d-block">
                         <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
                             La necesidad de dotar a los emprendedores con conocimientos legales y
@@ -252,7 +258,7 @@ function ArticulosOpinion() {
                     </div>
                 </Link>
                 <Link className="carousel-item" href='/articulos/articulo-02'>
-                    <Image src={imgArt2} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <Image src={imgArt2} alt='articulo' className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} />
                     <div className="carousel-caption d-block">
                         <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
                             Crisis de seguridad pública en Chile: ¿Qué podemos hacer como ciudadanos?
@@ -263,7 +269,7 @@ function ArticulosOpinion() {
                     </div>
                 </Link>
                 <Link className="carousel-item" href='/articulos/articulo-03'>
-                    <Image src={imgArt3} className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} alt="..." />
+                    <Image src={imgArt3} alt='articulo' className="d-block w-100" style={{ height: '350px', objectFit: 'cover', opacity: '0.7' }} />
                     <div className="carousel-caption d-block">
                         <h5 className='h2 fw-bold text-start' style={{ textShadow: '2px 2px 15px #737373' }}>
                             Formas de resolución de conflictos en Chile y La Mediación

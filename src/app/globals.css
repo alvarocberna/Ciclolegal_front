@@ -1,0 +1,9 @@
+.boxConSty {
+    transition: 0.4s;
+}
+
+.boxConSty:hover {
+    background: #F4F5FF;
+    cursor: pointer;
+    transition: 0.4s;
+}

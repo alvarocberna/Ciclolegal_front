@@ -11,7 +11,7 @@ export default function Navbar() {
                 <div className="container-fluid">
                     {/* Logo  */}
                     <Link className="navbar-brand" href="/">
-                        <Image src={logo} style={{ width: '200px', height: '40px' }}></Image>
+                        <Image src={logo} alt="Logo" style={{ width: '200px', height: '40px' }}></Image>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@ export default function Navbar() {
                                 <Link className="nav-link h-100 d-flex align-items-center justify-content-center" href="/articulos">Articulos de opinion</Link>
                             </li>
                             <li className="nav-item  col-12 col-lg-2" style={{ height: '60px' }}>
-                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/#contacto">Contactanos</Link>
+                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/contacto">Contactanos</Link>
                             </li>
                         </ul>
                     </div>
