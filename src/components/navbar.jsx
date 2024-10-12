@@ -29,10 +29,10 @@ export default function Navbar() {
                                 <Link className="nav-link h-100 d-flex align-items-center justify-content-center" href="/#abogados">Abogados y equipo</Link>
                             </li>
                             <li className="nav-item  col-12 col-lg-2" style={{ height: '60px' }}>
-                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center" href="/articulos">Articulos de opinion</Link>
+                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center" href="/articulos">Artículos de opinión</Link>
                             </li>
                             <li className="nav-item  col-12 col-lg-2" style={{ height: '60px' }}>
-                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/contacto">Contactanos</Link>
+                                <Link className="nav-link h-100 d-flex align-items-center justify-content-center " aria-current="page" href="/contacto">Contáctanos</Link>
                             </li>
                         </ul>
                     </div>

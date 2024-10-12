@@ -6,7 +6,7 @@ export default function Articulo01() {
                 laborales para fomentar la estabilidad empresarial.
             </h3>
             <h5 className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-7 m-auto mb-5">
-                Abogado, Claudio Saavedra, Magister en Dirección Tributaria.
+                Claudio Saavedra, Abogado, Magister en Dirección Tributaria.
             </h5>
             <div className="col-10 col-sm-8 col-md-10 col-lg-11 col-xl-7 m-auto d-flex flex-column">
                 <p style={{ textAlign: 'justify' }}>

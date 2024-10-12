@@ -167,11 +167,9 @@ function Abogados() {
                         <p className='text-center col-12 mb-1'>
                             Diplomada En Implementación De Políticas Públicas A Nivel Municipal,
                             Universidad Austral de Chile, 2018.
-                            a
                         </p>
                         <p className='text-center col-12 mb-1'>
                             Diplomada en Justicia Local y Derecho Municipal, UCH 2024.
-                            a
                         </p>
                         <p className='text-center col-12 mb-1 fw-bold' style={{ color: '#4DA6BE' }}>
                             Daniela.astorga@ciclolegal.cl
@@ -224,7 +222,7 @@ function Abogados() {
                             Mención Legislación Tributaria
                         </p>
                         <p className='text-center col-12 mb-1'>
-                            Ingeniera Comercial, en curso.
+                            Ingeniera Comercial.
                         </p>
                     </div>
                 </div>
@@ -236,9 +234,9 @@ function Abogados() {
 function ArticulosOpinion() {
     return (
         <div id="carouselExampleCaptions" className="carousel slide mb-5 d-flex flex-column">
-            {/* <h2 className="m-auto col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-3 h1" style={{ color: '#4DA6BE' }}>
+            <h2 className="m-auto col-10 col-sm-8 col-md-10 col-lg-11 col-xl-9 mb-3 h1" style={{ color: '#4DA6BE' }}>
                 Articulos de opinión
-            </h2> */}
+            </h2>
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
